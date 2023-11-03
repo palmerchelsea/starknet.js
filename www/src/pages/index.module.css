@@ -1,23 +1,35 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+:root {
+  --spacing-sm: 2rem;
+  --spacing-lg: 4rem;
+}
 
+/**
+ * .heroBanner styles for the main promotional banner
+ * The padding is larger on bigger screens and smaller on mobile for better space utilization
+ */
 .heroBanner {
-  padding: 4rem 0;
+  padding: var(--spacing-lg) 0;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
-@media screen and (max-width: 966px) {
+/**
+ * Adjust .heroBanner padding for tablet and mobile screens
+ */
+@media screen and (max-width: 768px) {
   .heroBanner {
-    padding: 2rem;
+    padding: var(--spacing-sm);
   }
 }
 
+/**
+ * .buttons are flex-container for button elements
+ * Flex-wrap ensures the buttons do not overflow and stack on smaller screens
+ */
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
